@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ba78d3228a30541221999a59d2640e9d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-textpath@1.2.3/leaflet.textpath.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ba78d3228a30541221999a59d2640e9d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ba78d3228a30541221999a59d2640e9d = L.map(
+                "map_ba78d3228a30541221999a59d2640e9d",
+                {
+                    center: [-33.55, -70.65],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4fa320c22bcce04e9dbf4dd8f6830bcb = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4fa320c22bcce04e9dbf4dd8f6830bcb.addTo(map_ba78d3228a30541221999a59d2640e9d);
+        
+    
+            var tile_layer_8bba8b086222073f49f4563000bf23dd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "OpenStreetMap",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8bba8b086222073f49f4563000bf23dd.addTo(map_ba78d3228a30541221999a59d2640e9d);
+        
+    
+            var feature_group_aa16813fc6d29aee23a776baffadf39e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_22b3e0a909e992acd1448ea5f2eb6ba3 = L.marker(
+                [-33.520093954844874, -70.59586110124692],
+                {
+}
+            ).addTo(feature_group_aa16813fc6d29aee23a776baffadf39e);
+        
+    
+            var div_icon_a00da2c3edad4b333cf2ded4b3efbcd1 = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_524a1691b31281c36911d2c964297b7f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f245b500c7e58cdf97c821bdf53f66d = $(`<div id="html_4f245b500c7e58cdf97c821bdf53f66d" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación VICUÑA MACKENNA</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_524a1691b31281c36911d2c964297b7f.setContent(html_4f245b500c7e58cdf97c821bdf53f66d);
+            
+        
+
+        marker_22b3e0a909e992acd1448ea5f2eb6ba3.bindPopup(popup_524a1691b31281c36911d2c964297b7f)
+        ;
+
+        
+    
+    
+            marker_22b3e0a909e992acd1448ea5f2eb6ba3.bindTooltip(
+                `<div>
+                     Estación VICUÑA MACKENNA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_22b3e0a909e992acd1448ea5f2eb6ba3.setIcon(div_icon_a00da2c3edad4b333cf2ded4b3efbcd1);
+            
+    
+            var marker_1bb5df88f43140bc14e9ac387417342f = L.marker(
+                [-33.42655058298339, -70.59129247210223],
+                {
+}
+            ).addTo(feature_group_aa16813fc6d29aee23a776baffadf39e);
+        
+    
+            var div_icon_f5973c1c3edfd1501dbb9d29a46ce015 = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_0c61da2a61a1a29c360292ed9c6e3b44 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_878174e0043fb01cd21fd26ab963f69c = $(`<div id="html_878174e0043fb01cd21fd26ab963f69c" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación CRISTOBAL COLON</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_0c61da2a61a1a29c360292ed9c6e3b44.setContent(html_878174e0043fb01cd21fd26ab963f69c);
+            
+        
+
+        marker_1bb5df88f43140bc14e9ac387417342f.bindPopup(popup_0c61da2a61a1a29c360292ed9c6e3b44)
+        ;
+
+        
+    
+    
+            marker_1bb5df88f43140bc14e9ac387417342f.bindTooltip(
+                `<div>
+                     Estación CRISTOBAL COLON
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1bb5df88f43140bc14e9ac387417342f.setIcon(div_icon_f5973c1c3edfd1501dbb9d29a46ce015);
+            
+    
+            var marker_712a9415593a5b69fd9c87622a45a461 = L.marker(
+                [-33.526893429154455, -70.59725352434049],
+                {
+}
+            ).addTo(feature_group_aa16813fc6d29aee23a776baffadf39e);
+        
+    
+            var div_icon_eaaa1808882606585df21be18f25810f = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_57afb93877eab4bb7ad08b320bc19163 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a3f77eb16c80fe8310e1fa75dcb474bf = $(`<div id="html_a3f77eb16c80fe8310e1fa75dcb474bf" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación VICENTE VALDES</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_57afb93877eab4bb7ad08b320bc19163.setContent(html_a3f77eb16c80fe8310e1fa75dcb474bf);
+            
+        
+
+        marker_712a9415593a5b69fd9c87622a45a461.bindPopup(popup_57afb93877eab4bb7ad08b320bc19163)
+        ;
+
+        
+    
+    
+            marker_712a9415593a5b69fd9c87622a45a461.bindTooltip(
+                `<div>
+                     Estación VICENTE VALDES
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_712a9415593a5b69fd9c87622a45a461.setIcon(div_icon_eaaa1808882606585df21be18f25810f);
+            
+    
+            var marker_b37d5da1c6711621c12d300977a24c79 = L.marker(
+                [-33.60917518354705, -70.5758670553222],
+                {
+}
+            ).addTo(feature_group_aa16813fc6d29aee23a776baffadf39e);
+        
+    
+            var div_icon_9dab640b8632853e5c855df5c335eca2 = L.divIcon({
+  "html": "\u003cdiv style=\"background-color:#e74c3c;width:25px;height:25px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:12px;\"\u003eM\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_032e845c0b9dfb5b8e3848b030830cfa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d3684a82542dc888410fe9eb32d265c2 = $(`<div id="html_d3684a82542dc888410fe9eb32d265c2" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h3 style='color:#e74c3c;margin:0'>Estación PLAZA PUENTE ALTO</h3><p><strong>Línea:</strong> Linea 4</p></div></div>`)[0];
+                popup_032e845c0b9dfb5b8e3848b030830cfa.setContent(html_d3684a82542dc888410fe9eb32d265c2);
+            
+        
+
+        marker_b37d5da1c6711621c12d300977a24c79.bindPopup(popup_032e845c0b9dfb5b8e3848b030830cfa)
+        ;
+
+        
+    
+    
+            marker_b37d5da1c6711621c12d300977a24c79.bindTooltip(
+                `<div>
+                     Estación PLAZA PUENTE ALTO
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b37d5da1c6711621c12d300977a24c79.setIcon(div_icon_9dab640b8632853e5c855df5c335eca2);
+            
+    
+            feature_group_aa16813fc6d29aee23a776baffadf39e.addTo(map_ba78d3228a30541221999a59d2640e9d);
+        
+    
+            var feature_group_4d6ef8ef73ed69c0e24a17429184c792 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_4b6a2e82b61ffd7cb8c5b21f0350c7ca = L.marker(
+                [-33.43893043296827, -70.71174567485565],
+                {
+}
+            ).addTo(feature_group_4d6ef8ef73ed69c0e24a17429184c792);
+        
+    
+            var div_icon_db30723bb6545a9d761468157eb84044 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#aec7e8;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_2e0aaec61cd991270ffb161d864053b2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0f733e1c535d2706ac01ab0c1df6fb8e = $(`<div id="html_0f733e1c535d2706ac01ab0c1df6fb8e" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; max-width: 300px;'><h4 style='color:#aec7e8;margin:0'>🚌 Parada 1</h4><p><strong>Trabajador 6</strong> (ID 6)</p><p>CAMINO LOYOLA N-5562, LO PRADO</p><p><strong>Metro objetivo:</strong> VICENTE VALDES</p><p><strong>t(calle ×1.40):</strong> 0.0 min</p></div></div>`)[0];
+                popup_2e0aaec61cd991270ffb161d864053b2.setContent(html_0f733e1c535d2706ac01ab0c1df6fb8e);
+            
+        
+
+        marker_4b6a2e82b61ffd7cb8c5b21f0350c7ca.bindPopup(popup_2e0aaec61cd991270ffb161d864053b2)
+        ;
+
+        
+    
+    
+            marker_4b6a2e82b61ffd7cb8c5b21f0350c7ca.bindTooltip(
+                `<div>
+                     🚌 Parada 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b6a2e82b61ffd7cb8c5b21f0350c7ca.setIcon(div_icon_db30723bb6545a9d761468157eb84044);
+            
+    
+            var marker_d73d15a99dd897f65971b549f904a188 = L.marker(
+                [-33.49750947559417, -70.67891990175977],
+                {
+}
+            ).addTo(feature_group_4d6ef8ef73ed69c0e24a17429184c792);
+        
+    
+            var div_icon_615d8c59a98cfece471cf0ec1cde34b1 = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#aec7e8;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e2\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_ad889ea072668c75dc5a6679da2c0511 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f5f56e233d104358a5c37533682d0f6 = $(`<div id="html_1f5f56e233d104358a5c37533682d0f6" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; max-width: 300px;'><h4 style='color:#aec7e8;margin:0'>🚌 Parada 2</h4><p><strong>Trabajador 2</strong> (ID 2)</p><p>BOMBERO OSSANDON N-3251, PEDRO AGUIRRE CERDA</p><p><strong>Metro objetivo:</strong> VICUÑA MACKENNA</p><p><strong>t(calle ×1.40):</strong> 14.2 min</p></div></div>`)[0];
+                popup_ad889ea072668c75dc5a6679da2c0511.setContent(html_1f5f56e233d104358a5c37533682d0f6);
+            
+        
+
+        marker_d73d15a99dd897f65971b549f904a188.bindPopup(popup_ad889ea072668c75dc5a6679da2c0511)
+        ;
+
+        
+    
+    
+            marker_d73d15a99dd897f65971b549f904a188.bindTooltip(
+                `<div>
+                     🚌 Parada 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d73d15a99dd897f65971b549f904a188.setIcon(div_icon_615d8c59a98cfece471cf0ec1cde34b1);
+            
+    
+            var marker_4ab5c8f2e5353d5147181871ecca05c2 = L.marker(
+                [-33.542424072703646, -70.67016664838572],
+                {
+}
+            ).addTo(feature_group_4d6ef8ef73ed69c0e24a17429184c792);
+        
+    
+            var div_icon_d13abe4e6138e3ab1bdc1f5909e155cc = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#aec7e8;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e3\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_21deeb3d12ee4b51050fd15518bfffe9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d32c2a7bd9973d7a8638385f6549c134 = $(`<div id="html_d32c2a7bd9973d7a8638385f6549c134" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; max-width: 300px;'><h4 style='color:#aec7e8;margin:0'>🚌 Parada 3</h4><p><strong>Trabajador 5</strong> (ID 5)</p><p>TRINIDAD RAMIREZ N-0217, LA CISTERNA</p><p><strong>Metro objetivo:</strong> VICENTE VALDES</p><p><strong>t(calle ×1.40):</strong> 25.6 min</p></div></div>`)[0];
+                popup_21deeb3d12ee4b51050fd15518bfffe9.setContent(html_d32c2a7bd9973d7a8638385f6549c134);
+            
+        
+
+        marker_4ab5c8f2e5353d5147181871ecca05c2.bindPopup(popup_21deeb3d12ee4b51050fd15518bfffe9)
+        ;
+
+        
+    
+    
+            marker_4ab5c8f2e5353d5147181871ecca05c2.bindTooltip(
+                `<div>
+                     🚌 Parada 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ab5c8f2e5353d5147181871ecca05c2.setIcon(div_icon_d13abe4e6138e3ab1bdc1f5909e155cc);
+            
+    
+            var poly_line_1f884f0d3850caf2784b597c81b88862 = L.polyline(
+                [[-33.4388842, -70.7121339], [-33.4389408, -70.7121437], [-33.439135, -70.7125133], [-33.4390023, -70.7128552], [-33.4396675, -70.7129095], [-33.4402611, -70.7129579], [-33.4409638, -70.7130153], [-33.4415592, -70.7130729], [-33.4421438, -70.7131116], [-33.4424225, -70.7131344], [-33.4427939, -70.7131762], [-33.4428942, -70.7131807], [-33.4431898, -70.7131532], [-33.4438057, -70.71304], [-33.4446207, -70.7127235], [-33.4456674, -70.7123571], [-33.4457533, -70.711492], [-33.4458418, -70.7106002], [-33.4458818, -70.7101519], [-33.4459506, -70.7093534], [-33.4460367, -70.7083767], [-33.4460553, -70.7073352], [-33.4474377, -70.7072746], [-33.4478304, -70.7072463], [-33.4481903, -70.707266], [-33.4483964, -70.7072524], [-33.4485146, -70.7072464], [-33.4488044, -70.7072256], [-33.4490905, -70.7071885], [-33.4494752, -70.7071232], [-33.4501221, -70.7069962], [-33.4508208, -70.7068505], [-33.451098, -70.706772], [-33.4520697, -70.7064363], [-33.4526378, -70.7063001], [-33.4536884, -70.7061309], [-33.4554984, -70.7058513], [-33.4560633, -70.7058325], [-33.456134, -70.7058279], [-33.457197, -70.7057455], [-33.4573937, -70.7057199], [-33.4574861, -70.7057105], [-33.4581886, -70.7056341], [-33.4583442, -70.705616], [-33.4591431, -70.7055342], [-33.4593282, -70.7055254], [-33.4603931, -70.7054534], [-33.461059, -70.7054109], [-33.4616558, -70.7053728], [-33.4622488, -70.7053206], [-33.4628508, -70.7052819], [-33.4632612, -70.7052551], [-33.4634404, -70.7052434], [-33.464031, -70.7052053], [-33.4645289, -70.7051625], [-33.4647993, -70.7051334], [-33.4660678, -70.70502], [-33.46641, -70.7049894], [-33.4668328, -70.7049516], [-33.4672205, -70.7049169], [-33.4676027, -70.7048828], [-33.4679076, -70.7048548], [-33.4679894, -70.7048482], [-33.4684273, -70.7048059], [-33.4687702, -70.7047731], [-33.4695057, -70.704695], [-33.4699669, -70.7046466], [-33.4704232, -70.7046001], [-33.4714022, -70.7044798], [-33.4718517, -70.7044019], [-33.4723663, -70.7042883], [-33.4735437, -70.7039067], [-33.4746369, -70.7035696], [-33.4750457, -70.7034534], [-33.4759593, -70.7031872], [-33.476138, -70.703116], [-33.4815849, -70.6985343], [-33.4817608, -70.6982908], [-33.4818648, -70.6981465], [-33.4819296, -70.6980564], [-33.4823078, -70.6975304], [-33.4829894, -70.6965828], [-33.4834176, -70.6957442], [-33.4834719, -70.69561], [-33.4834953, -70.6955456], [-33.483527, -70.6954537], [-33.4838731, -70.6944839], [-33.4840802, -70.6939413], [-33.4842705, -70.6934247], [-33.4847045, -70.691706], [-33.484408, -70.6896989], [-33.4844429, -70.6894476], [-33.4848123, -70.6884331], [-33.4850727, -70.6880235], [-33.4857246, -70.6873557], [-33.4862033, -70.6868754], [-33.4862736, -70.6867986], [-33.4864159, -70.6866192], [-33.4882382, -70.6841709], [-33.4889643, -70.6831478], [-33.4913086, -70.6804448], [-33.4919305, -70.6796508], [-33.4921511, -70.6793678], [-33.4924965, -70.6789246], [-33.4925453, -70.678862], [-33.492832, -70.6784941], [-33.4931119, -70.678135], [-33.493785, -70.6772902], [-33.4938493, -70.6771897], [-33.4939572, -70.6770619], [-33.4943451, -70.6766333], [-33.494823, -70.6768651], [-33.4950661, -70.6769842], [-33.4959758, -70.6774588], [-33.4963325, -70.6776506], [-33.4965277, -70.6777579], [-33.4967463, -70.6778859], [-33.496913, -70.6779838], [-33.4970524, -70.6780713], [-33.4973082, -70.6782282], [-33.4974189, -70.6782918], [-33.4975452, -70.6783651], [-33.4975364, -70.6789431], [-33.4975452, -70.6783651], [-33.4977494, -70.6784699], [-33.4978901, -70.6785417], [-33.4983091, -70.6787632], [-33.4987415, -70.6789848], [-33.4989663, -70.6791065], [-33.4995472, -70.6794006], [-33.4999579, -70.6796124], [-33.5007965, -70.6800437], [-33.5011809, -70.68024], [-33.5012862, -70.6802943], [-33.5023106, -70.680835], [-33.5024034, -70.6808853], [-33.5026327, -70.681002], [-33.502891, -70.6811341], [-33.5030893, -70.681236], [-33.5036154, -70.6815033], [-33.5037454, -70.6815706], [-33.5040741, -70.6817456], [-33.5042525, -70.6818409], [-33.5048245, -70.6821278], [-33.505097, -70.6822711], [-33.5060849, -70.6827763], [-33.5062605, -70.6828685], [-33.5088718, -70.6841014], [-33.5102431, -70.6845771], [-33.5138696, -70.6855477], [-33.5150506, -70.6858174], [-33.5162512, -70.6860918], [-33.5163848, -70.6856603], [-33.5165294, -70.6851926], [-33.5166063, -70.6849438], [-33.5170125, -70.6836294], [-33.5174193, -70.6823135], [-33.517578, -70.6818], [-33.5177422, -70.6812774], [-33.5179533, -70.6805863], [-33.5183528, -70.6792961], [-33.5209735, -70.6768466], [-33.5212297, -70.6763314], [-33.5213906, -70.6758635], [-33.521669, -70.674969], [-33.5216889, -70.6749133], [-33.5218759, -70.6743894], [-33.52213, -70.6736778], [-33.5224092, -70.6728958], [-33.5224844, -70.6726851], [-33.5227264, -70.6720071], [-33.5229873, -70.6712765], [-33.5235204, -70.6715473], [-33.524045, -70.6717511], [-33.5247546, -70.6720267], [-33.5250944, -70.6721587], [-33.5255326, -70.6723289], [-33.5263036, -70.6726284], [-33.5268123, -70.6728039], [-33.5268471, -70.6728182], [-33.5272938, -70.6728493], [-33.5275436, -70.6726681], [-33.5277025, -70.6724094], [-33.5285862, -70.6728053], [-33.5286356, -70.6728274], [-33.5292412, -70.6730987], [-33.5298902, -70.6733895], [-33.5307279, -70.6737648], [-33.5319047, -70.674292], [-33.5324655, -70.6745433], [-33.5330147, -70.6747893], [-33.5356155, -70.6754002], [-33.5357111, -70.6754176], [-33.5368659, -70.6758623], [-33.5369478, -70.6758957], [-33.5370003, -70.6757221], [-33.5381667, -70.6761655], [-33.5384215, -70.6753352], [-33.538631, -70.6746522], [-33.5388439, -70.6739585], [-33.5390204, -70.6733829], [-33.5390948, -70.6731405], [-33.5391709, -70.6728925], [-33.5393292, -70.6723764], [-33.5394843, -70.6718751], [-33.539666, -70.6712998], [-33.5398075, -70.6707897], [-33.540011, -70.6700729], [-33.54019, -70.6694413], [-33.5413606, -70.6697882], [-33.5425298, -70.6700424], [-33.5413606, -70.6697882], [-33.54019, -70.6694413], [-33.5395734, -70.6692037], [-33.5389683, -70.6689777], [-33.5388921, -70.6689547], [-33.5376451, -70.6685995], [-33.5382489, -70.6666345], [-33.5369851, -70.6663428], [-33.5371326, -70.66592], [-33.5372845, -70.6654612], [-33.5373225, -70.6653459], [-33.5374602, -70.664902], [-33.5375362, -70.6646465], [-33.5375829, -70.6644984], [-33.5376008, -70.664436], [-33.5376477, -70.6642899], [-33.5377271, -70.6640196], [-33.5378484, -70.6636233], [-33.5381069, -70.6626465], [-33.5384422, -70.6612831], [-33.5389691, -70.6584192], [-33.5390622, -70.6579147], [-33.5395554, -70.6550395], [-33.5402876, -70.6509933], [-33.5406715, -70.6483523], [-33.5411571, -70.6451078], [-33.5412725, -70.6443981], [-33.5421414, -70.6379324], [-33.5423112, -70.6366959], [-33.5423408, -70.6364843], [-33.5424373, -70.6358091], [-33.5425169, -70.6352462], [-33.5426483, -70.6342935], [-33.5426639, -70.6341538], [-33.5426727, -70.6340753], [-33.5426891, -70.6339279], [-33.5427209, -70.6336315], [-33.5427718, -70.633208], [-33.5430741, -70.630954], [-33.5431318, -70.6289233], [-33.5429951, -70.6277346], [-33.542864, -70.6268019], [-33.5427237, -70.6258336], [-33.542589, -70.6248721], [-33.5424593, -70.6238195], [-33.5421101, -70.6203945], [-33.5420958, -70.6201789], [-33.5418233, -70.6180673], [-33.5413825, -70.6160584], [-33.5413623, -70.6159209], [-33.5412946, -70.6153415], [-33.5412527, -70.6150069], [-33.54108, -70.613586], [-33.5408291, -70.6124347], [-33.5406625, -70.6120411], [-33.5400632, -70.6111474], [-33.5398325, -70.6109454], [-33.5395256, -70.6103859], [-33.539453, -70.6102775], [-33.538865, -70.6101467], [-33.5379912, -70.6095992], [-33.5377338, -70.6094386], [-33.5375519, -70.6093495], [-33.5373952, -70.6092966], [-33.5369703, -70.6090739], [-33.5367087, -70.6089044], [-33.536583, -70.6088231], [-33.5356708, -70.6082243], [-33.5353134, -70.6079863], [-33.5352231, -70.6079259], [-33.5346547, -70.607547], [-33.5342701, -70.6072821], [-33.5338889, -70.6070327], [-33.5328588, -70.6063769], [-33.5324997, -70.6061404], [-33.5318587, -70.6057183], [-33.5313343, -70.6053709], [-33.5311683, -70.6052607], [-33.5302611, -70.6046683], [-33.5298429, -70.6044022], [-33.5294022, -70.6041178], [-33.5287985, -70.6037436], [-33.5285064, -70.6035318], [-33.528576, -70.603234], [-33.5286, -70.6031482], [-33.5286199, -70.6027103], [-33.5286089, -70.6023262], [-33.5285833, -70.6019318], [-33.5285058, -70.6015944], [-33.5285039, -70.6014912], [-33.5284955, -70.6010752], [-33.5284939, -70.6008836], [-33.5284923, -70.6006846], [-33.5284892, -70.6002988], [-33.5284858, -70.5998955], [-33.5284827, -70.5994528], [-33.5284817, -70.5988853], [-33.5284813, -70.5983219], [-33.528481, -70.5978649], [-33.528481, -70.5978251], [-33.5284806, -70.5973472], [-33.5284772, -70.5968739], [-33.5284755, -70.5966394], [-33.5284539, -70.5961156], [-33.5284284, -70.5959331], [-33.5265128, -70.5967431], [-33.5265681, -70.5969067], [-33.5269437, -70.5967439], [-33.5270014, -70.5974689], [-33.5270131, -70.5976526], [-33.5270187, -70.5977542], [-33.5270403, -70.5981445], [-33.5270604, -70.5985087], [-33.5270904, -70.599052], [-33.5261603, -70.5993143], [-33.5253037, -70.5995483], [-33.524606, -70.599741], [-33.5240587, -70.5998932], [-33.5239274, -70.5996875], [-33.5233533, -70.5987976], [-33.5231005, -70.5984834], [-33.5230559, -70.5984369], [-33.5228848, -70.5982562], [-33.522811, -70.5981787], [-33.5225712, -70.5979581], [-33.5223285, -70.5977591], [-33.5220933, -70.5975819], [-33.5219641, -70.5974914], [-33.5217221, -70.5973472], [-33.5209786, -70.5967947], [-33.5199035, -70.5959646]],
+                {"bubblingMouseEvents": true, "color": "#aec7e8", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#aec7e8", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(feature_group_4d6ef8ef73ed69c0e24a17429184c792);
+        
+    
+            poly_line_1f884f0d3850caf2784b597c81b88862.bindTooltip(
+                `<div>
+                     🚌 Ruta V300
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            poly_line_1f884f0d3850caf2784b597c81b88862.setText(
+                " \u25b6   \u25b6   \u25b6   \u25b6 ",
+                {
+  "repeat": true,
+  "center": false,
+  "below": false,
+  "offset": 7,
+  "orientation": 0,
+  "attributes": {
+  "fill": "#aec7e8",
+  "font-weight": "bold",
+  "font-size": "11",
+},
+}
+            );
+        
+    
+            var marker_51b458608b33e5f7eaab5fcb32bdfc83 = L.marker(
+                [-33.526893429154455, -70.59725352434049],
+                {
+}
+            ).addTo(feature_group_4d6ef8ef73ed69c0e24a17429184c792);
+        
+    
+            var div_icon_aea73da7a7660158cb88cdafe215c96d = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#34495e;width:30px;height:30px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003eM1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_4fc682eeeb03e0e6f0237e958e665398 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c8a7af273c40bf047e006d7f7354615 = $(`<div id="html_6c8a7af273c40bf047e006d7f7354615" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h4 style='margin:0;color:#34495e'>Visita de metro</h4><p><strong>Estación:</strong> VICENTE VALDES</p><p><strong>t(calle ×1.40):</strong> 40.7 min</p></div></div>`)[0];
+                popup_4fc682eeeb03e0e6f0237e958e665398.setContent(html_6c8a7af273c40bf047e006d7f7354615);
+            
+        
+
+        marker_51b458608b33e5f7eaab5fcb32bdfc83.bindPopup(popup_4fc682eeeb03e0e6f0237e958e665398)
+        ;
+
+        
+    
+    
+            marker_51b458608b33e5f7eaab5fcb32bdfc83.bindTooltip(
+                `<div>
+                     Metro VICENTE VALDES
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_51b458608b33e5f7eaab5fcb32bdfc83.setIcon(div_icon_aea73da7a7660158cb88cdafe215c96d);
+            
+    
+            var marker_f5fde913304ea56760d0bcfffa7a7ae9 = L.marker(
+                [-33.520093954844874, -70.59586110124692],
+                {
+}
+            ).addTo(feature_group_4d6ef8ef73ed69c0e24a17429184c792);
+        
+    
+            var div_icon_82c3abac0e67e86eb96db9d5dd64010a = L.divIcon({
+  "html": "\u003cdiv style=\u0027background-color:#27ae60;width:35px;height:35px;border-radius:50%;border:3px solid white;box-shadow:0 2px 5px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;color:white;font-weight:bold;font-size:14px;\u0027\u003e\ud83c\udfc1\u003c/div\u003e",
+  "className": "empty",
+});
+        
+    
+        var popup_cf1bb9f190696727351ae6a0adda1057 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d0bf7b73daf71a1c41cef5bb3522b677 = $(`<div id="html_d0bf7b73daf71a1c41cef5bb3522b677" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial'><h4 style='margin:0;color:#27ae60'>Metro final</h4><p><strong>Estación:</strong> VICUÑA MACKENNA</p><p><strong>t(calle ×1.40):</strong> 42.6 min</p></div></div>`)[0];
+                popup_cf1bb9f190696727351ae6a0adda1057.setContent(html_d0bf7b73daf71a1c41cef5bb3522b677);
+            
+        
+
+        marker_f5fde913304ea56760d0bcfffa7a7ae9.bindPopup(popup_cf1bb9f190696727351ae6a0adda1057)
+        ;
+
+        
+    
+    
+            marker_f5fde913304ea56760d0bcfffa7a7ae9.bindTooltip(
+                `<div>
+                     Final VICUÑA MACKENNA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f5fde913304ea56760d0bcfffa7a7ae9.setIcon(div_icon_82c3abac0e67e86eb96db9d5dd64010a);
+            
+    
+            feature_group_4d6ef8ef73ed69c0e24a17429184c792.addTo(map_ba78d3228a30541221999a59d2640e9d);
+        
+    
+            var layer_control_d70b168dd0effdefe515f919ba087b49_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_4fa320c22bcce04e9dbf4dd8f6830bcb,
+                    "Ruta V300" : tile_layer_8bba8b086222073f49f4563000bf23dd,
+                },
+                overlays :  {
+                    "Estaciones de Metro" : feature_group_aa16813fc6d29aee23a776baffadf39e,
+                    "\ud83d\ude8c V300 (Mediano)" : feature_group_4d6ef8ef73ed69c0e24a17429184c792,
+                },
+            };
+            let layer_control_d70b168dd0effdefe515f919ba087b49 = L.control.layers(
+                layer_control_d70b168dd0effdefe515f919ba087b49_layers.base_layers,
+                layer_control_d70b168dd0effdefe515f919ba087b49_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ba78d3228a30541221999a59d2640e9d);
+
+        
+    
+            var tile_layer_b4f4fabb27e524e7c65c353fc633c720 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_91f46f70b1fd317036cbe6a5af5f5fa3 = new L.Control.MiniMap(
+                tile_layer_b4f4fabb27e524e7c65c353fc633c720,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_ba78d3228a30541221999a59d2640e9d.addControl(mini_map_91f46f70b1fd317036cbe6a5af5f5fa3);
+        
+</script>
+</html>
